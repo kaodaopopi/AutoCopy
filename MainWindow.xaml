@@ -1,0 +1,25 @@
+﻿<Window x:Class="AutoCopy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCopy"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnRun" Content="執行" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="64" Width="104" Click="btnRun_Click"/>
+        <ProgressBar x:Name="pgbar" HorizontalAlignment="Center" Height="53" Margin="0,345,0,0" VerticalAlignment="Top" Width="672" RenderTransformOrigin="0.5,0.5" ValueChanged="pgbar_ValueChanged">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.252"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Label Content="檔案類型:" HorizontalAlignment="Left" Margin="221,97,0,0" VerticalAlignment="Top" Height="60" Width="174" FontSize="36"/>
+        <TextBox x:Name="txtinput" HorizontalAlignment="Left" Margin="395,97,0,0" Text="jpg" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" TextChanged="txtinput_TextChanged" Height="60" FontSize="36"/>
+
+    </Grid>
+</Window>
